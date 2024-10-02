@@ -1,9 +1,10 @@
 void main(){
   final mySquare = Square( side:10 );
   
-  mySquare._side = 5;
+  mySquare._side = -32;
   
-  print('Area: ${ mySquare.area }');
+  print(""" Lado del Cuadrado: ${mySquare._side}
+  Área que ocupa: ${mySquare.calculateArea()}""");
 }
 
 class Square {
@@ -16,11 +17,9 @@ class Square {
     return _side * _side;
   }
   
-  set side( double value ){
-    print('setting new value $value');
-    if ( value < 0 ) throw 'value must be >=0';
-    
-    _side * _side;
+  set side(double value)
+  {
+    return _side*_side;
   }
   
   double calculateArea() {

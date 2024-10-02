@@ -15,8 +15,10 @@ Proyecto de clase para la Unidad 1 de la Asignatura de Desarrollo Móvil Integra
 |5 |Tipos de datos Dinamicos |5 |Finalizada |
 |6 |Mapas|6|Finalizada|
 |7 |Listas, Iterables y Conjuntos de Datos|9|Finalizada|
-|8 |Funciones y Parámetros|10|Finalizada|
-|9 |Clases|9|Activa |
+|8 |Funciones y Parámetros|10 |Finalizada|
+|9 |Clases y Sobreescritura de Métodos Nativos|9 |Finalizada |
+|10 |Constructores Nombrados|8 |Activa|
+|11 |Getters (Lectura Controlada) y Setters (Modificación Controlado)|9 |Activa|
 
 ### LISTA DE HERRAMIENTAS
 ![DART](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
