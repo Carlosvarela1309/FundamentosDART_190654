@@ -43,4 +43,4 @@ void main(){
   print("""Hemos filtrado sobre la LIST solo los elementos mayores a 5:
   Resultado de Filtro: ${numerosMayoresA5}""");
   print("Eliminamos duplicados ... ${numerosMayoresA5.toSet()}");
-}
+}DARTPAD/Ex05_listas_Conjunto_Iterable.dart
