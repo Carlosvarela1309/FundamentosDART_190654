@@ -14,7 +14,6 @@ void main(){
     isActive
   )
 
-
   class Person {
     int Id,
     String cortesyTitle,
