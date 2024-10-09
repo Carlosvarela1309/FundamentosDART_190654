@@ -1,22 +1,53 @@
 void main() {
-  print('Inicio del programa');
+  final windPlant = WindPlant(initialEnergy: 100);
+  final nuclearPlant = NuclearPlant(energyLeft: 100);
 
-  httpGet('https://fernando-herrera.com/cursos')
-    .then(
-      (value){
-        print( value );
-      })
-    .catchError( (err) {
-      print('Error: $err');
-    });
-  
-  print('Fin del programa');
+  print('wind :${chargePhone(windPlant)}');
+  print('nuclear :${chargePhone(nuclearPlant)}');
 }
 
-Future <String> httpGet( String url ){
-  return Future.delayed( const Duration(seconds: 1), () {
-    throw 'Error en la petición http';
-    // return 'Respuesta de la petición http';
+double chargePhone(EnergyPlant plant){
+  if(plant.energyLeft <10){
+    throw Exception('Not enough energy');
+  }
+  return plant.energyLeft -10;
+}
+
+enum PlantType {nuclear, wind, water}
+
+abstract class EnergyPlant {
+  double energyLeft;
+  final PlantType type; // nuclear, wind, water
+
+  EnergyPlant({
+    required this.energyLeft,
+    required this.type
   });
+  void consumeEnergy (double amount);
 }
 
+class WindPlant extends EnergyPlant{
+  WindPlant({required double initialEnergy})
+    : super(energyLeft: initialEnergy, type: PlantType.wind);
+
+  @override
+  void consumeEnergy (double amount){
+    energyLeft -= amount;
+  }
+}
+
+class NuclearPlant implements EnergyPlant {
+  @override
+  double energyLeft;
+
+  @override
+  final PlantType type = PlantType.nuclear;
+
+  @override
+  NuclearPlant({required this.energyLeft});
+
+  @override
+  void consumeEnergy(double amount) {
+    energyLeft -= (amount * 0.5);
+  }
+}
