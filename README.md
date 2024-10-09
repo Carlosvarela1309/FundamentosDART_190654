@@ -28,4 +28,4 @@ Proyecto de clase para la Unidad 1 de la Asignatura de Desarrollo Móvil Integra
 ![DART](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
 ## Autor
-Elaborado por: Carlos Eduardo Varela Barrios [@Carlos](//https://github.com/Carlosvarela1309)
+Elaborado por: Carlos Eduardo Varela Barrios [@Carlos Varela](//https://github.com/Carlosvarela1309)
